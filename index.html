@@ -3,203 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pallavi Modak | Portfolio</title>
-  <meta name="description" content="Portfolio of Pallavi Modak, a student and aspiring developer based in Mumbai, India.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Pallavi Modak's portfolio in data, analytics, MarTech, cloud transformation, automation and technology delivery leadership.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Pallavi Modak | Data, MarTech & Cloud Transformation Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b1220;--panel:#111c2e;--panel2:#152238;--ink:#edf3fb;--muted:#a9b8cc;
+      --line:rgba(194,211,234,.16);--accent:#56e0c0;--accent2:#82aaff;--warm:#f6c177;
+      --max:1180px;--radius:22px;--shadow:0 22px 60px rgba(0,0,0,.22)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(70,111,183,.17),transparent 35%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:850;letter-spacing:-.04em;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+    .brand-mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08121f;font-size:.9rem}
+    .nav-links{display:flex;align-items:center;gap:25px;color:var(--muted);font-size:.92rem}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-links .nav-cta{color:#06151b;background:var(--accent);padding:10px 15px;border-radius:999px;font-weight:750}
+    .hero{padding:88px 0 76px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+    .eyebrow:before{content:"";width:25px;height:2px;background:var(--accent)}
+    h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.02;letter-spacing:-.065em;margin:20px 0}
+    h1 span{color:var(--accent)}
+    .hero-lede{font-size:clamp(1.05rem,2vw,1.28rem);max-width:740px;color:#c7d3e4}
+    .hero-copy{color:var(--muted);max-width:690px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);font-weight:750;font-size:.92rem;transition:transform .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .btn.primary{background:var(--accent);color:#06151b;border-color:var(--accent)}
+    .hero-card{background:linear-gradient(145deg,rgba(21,34,56,.95),rgba(15,25,42,.95));border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow);position:relative}
+    .hero-card:before{content:"";position:absolute;inset:-1px;border-radius:28px;padding:1px;background:linear-gradient(135deg,rgba(86,224,192,.4),transparent 45%,rgba(130,170,255,.3));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+    .card-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:750}
+    .focus-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:15px}
+    .focus-list li{display:flex;gap:12px;align-items:flex-start}
+    .check{flex:0 0 26px;height:26px;border-radius:9px;background:rgba(86,224,192,.12);color:var(--accent);display:grid;place-items:center;font-weight:900}
+    .focus-list strong{display:block;font-size:.98rem}
+    .focus-list small{display:block;color:var(--muted);font-size:.86rem;margin-top:2px}
+    section{padding:66px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+    .section-label{color:var(--accent);font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
+    h2{font-size:clamp(1.9rem,3.5vw,2.8rem);line-height:1.12;letter-spacing:-.045em;margin:8px 0 0}
+    .section-intro{color:var(--muted);max-width:570px;margin:0}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .metric{padding:23px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+    .metric strong{display:block;font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.05em;color:var(--accent);line-height:1.2}
+    .metric span{display:block;color:var(--muted);font-size:.9rem;margin-top:9px}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+    .surface{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+    .surface p{color:#c5d1e1;margin:0 0 14px}
+    .surface p:last-child{margin-bottom:0}
+    .pill-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:999px;padding:7px 11px;color:#d6e2f1;font-size:.83rem}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skill{padding:21px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+    .skill h3{font-size:1rem;margin:0 0 8px}
+    .skill p{font-size:.9rem;color:var(--muted);margin:0}
+    .project-list{display:grid;gap:22px}
+    .project{background:linear-gradient(145deg,rgba(17,28,46,.98),rgba(13,22,37,.98));border:1px solid var(--line);border-radius:24px;overflow:hidden}
+    .project-top{padding:28px 30px 18px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start}
+    .project-num{color:var(--accent);font-size:.8rem;letter-spacing:.13em;font-weight:800}
+    .project h3{font-size:clamp(1.25rem,2.4vw,1.65rem);line-height:1.25;margin:8px 0 10px;letter-spacing:-.025em}
+    .project-summary{color:#c1cede;max-width:800px;margin:0}
+    .project-type{white-space:nowrap;border:1px solid rgba(86,224,192,.35);color:var(--accent);border-radius:999px;padding:7px 11px;font-size:.77rem;font-weight:750}
+    .project-body{display:grid;grid-template-columns:1.03fr .97fr;gap:24px;padding:0 30px 28px}
+    .detail-block h4{font-size:.82rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin:14px 0 8px}
+    .detail-block p,.detail-block li{color:var(--muted);font-size:.92rem}
+    .detail-block ul{padding-left:19px;margin:8px 0}
+    .video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#050a12;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:14px}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-note{color:#8798af;font-size:.78rem;margin-top:8px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+    .tag{font-size:.76rem;background:rgba(130,170,255,.09);border:1px solid rgba(130,170,255,.2);color:#c8d8ff;border-radius:7px;padding:5px 8px}
+    .video-link{display:inline-flex;gap:7px;margin-top:12px;color:var(--accent);font-weight:700;font-size:.88rem}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
+    .process-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+    .process-card:before{counter-increment:step;content:"0" counter(step);color:var(--accent);font-weight:850;font-size:.82rem;letter-spacing:.1em}
+    .process-card h3{margin:12px 0 7px;font-size:1rem}
+    .process-card p{margin:0;color:var(--muted);font-size:.89rem}
+    .contact-panel{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:34px;background:linear-gradient(120deg,rgba(86,224,192,.1),rgba(130,170,255,.09));border:1px solid var(--line);border-radius:26px}
+    .contact-panel p{color:var(--muted);margin:10px 0 0;max-width:700px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:#8293aa;font-size:.82rem}
+    footer .foot-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media(max-width:900px){.hero-grid,.about-grid,.project-body{grid-template-columns:1fr}.hero-grid{gap:35px}.metrics{grid-template-columns:repeat(2,1fr)}.skills-grid{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.project-top{grid-template-columns:1fr}.project-type{justify-self:start}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav-inner{height:auto;min-height:68px;align-items:flex-start;padding:15px 0;flex-direction:column;gap:12px}.nav-links{width:100%;gap:16px;overflow-x:auto;padding-bottom:2px;font-size:.84rem}.nav-links .nav-cta{padding:7px 11px}.hero{padding:60px 0 48px}section{padding:48px 0}.metrics,.skills-grid,.process{grid-template-columns:1fr}.metric{padding:19px}.surface{padding:22px}.project-top{padding:23px 21px 14px}.project-body{padding:0 21px 23px}.contact-panel{align-items:flex-start;flex-direction:column;padding:25px}.hero-card{padding:23px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="#home" class="logo">VJ.</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="cta">Contact</a>
-    </nav>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Pallavi Modak home"><span class="brand-mark">PM</span><span>Pallavi Modak</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects & Videos</a><a href="#approach">Approach</a><a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <p class="eyebrow">Hello, I’m</p>
-      <h1>Pallavi Modak</h1>
-      <p class="subtitle">
-        Student and aspiring developer from Pune, India. I build practical
-        projects while learning web development.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">
-          GitHub Profile
-        </a>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Data • MarTech • Cloud • Delivery</div>
+          <h1>Turning complex data into <span>business impact.</span></h1>
+          <p class="hero-lede">Pallavi Modak — Technology & Data Transformation Leader</p>
+          <p class="hero-copy">20+ years in IT, including 13+ years focused on data, analytics, cloud transformation, automation and technology delivery. I connect business priorities with practical data platforms, marketing technology and executive-ready insights.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore portfolio <span aria-hidden="true">↘</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/pallavi-modak" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a class="btn" href="mailto:pallaviskale@gmail.com">Email me ↗</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Professional focus">
+          <div class="card-kicker">What I bring</div>
+          <ul class="focus-list">
+            <li><span class="check">✓</span><div><strong>Business-first data strategy</strong><small>Translate stakeholder needs into measurable delivery outcomes.</small></div></li>
+            <li><span class="check">✓</span><div><strong>Cloud data & analytics</strong><small>Azure-first data platforms, pipelines, reporting and cloud transformation.</small></div></li>
+            <li><span class="check">✓</span><div><strong>Media & MarTech domain</strong><small>Campaign measurement, marketing APIs, audience insights and automation.</small></div></li>
+            <li><span class="check">✓</span><div><strong>End-to-end delivery leadership</strong><small>Governance, risk, UAT, stakeholder alignment and executive communication.</small></div></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div class="about-grid">
-        <p>
-          I’m currently a student focused on learning software development.
-          I enjoy turning ideas into simple, useful applications and improving
-          my understanding of front-end development.
-        </p>
-        <ul class="facts">
-          <li><strong>Location:</strong> Thane, Maharashtra, India</li>
-          <li><strong>Focus:</strong> Senior Technology Manager</li>
-          <li><strong>Currently learning:</strong> JavaScript and responsive design</li>
-          <li><strong>Open to:</strong> Job Opportunities as Senior Technical Leader</li>
-        </ul>
+    <section aria-label="Selected impact">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-label">Selected impact</div><h2>Outcomes that matter</h2></div><p class="section-intro">A snapshot of the impact areas represented across my data, automation and analytics work. Results vary by project and client.</p></div>
+        <div class="metrics">
+          <div class="metric"><strong>₹40L</strong><span>Incremental revenue impact reported for a campaign analytics engagement</span></div>
+          <div class="metric"><strong>~60%</strong><span>Faster analytics target / improvement highlighted in portfolio positioning</span></div>
+          <div class="metric"><strong>~40%</strong><span>Reduction in manual reporting effort across selected workflows</span></div>
+          <div class="metric"><strong>2–3 FTE</strong><span>Potential capacity released through reporting automation in selected engagements</span></div>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Python</span>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-label">Profile</div><h2>About me</h2></div></div>
+        <div class="about-grid">
+          <div class="surface">
+            <p>I am a data and technology leader with experience spanning media, BFSI and insurance environments. My work brings together cloud data engineering, BI, marketing technology and delivery management to make reporting more timely, consistent and actionable.</p>
+            <p>At Madison World, my remit included data and automation initiatives such as marketing data integration, campaign dashboards, API-to-CRM workflows, data quality standardisation and executive reporting. Previously at GroupM, I worked across data and technology initiatives supporting media planning, optimisation, data exchange and business reporting.</p>
+            <p>My strength is connecting engineering teams and business stakeholders: clarifying the outcome, shaping the delivery plan, managing dependencies and risks, and helping teams take solutions through testing and release.</p>
+          </div>
+          <div class="surface">
+            <div class="card-kicker">Career snapshot</div>
+            <ul class="focus-list">
+              <li><span class="check">1</span><div><strong>Madison World</strong><small>Head – Data & Automation · Feb 2024–May 2026</small></div></li>
+              <li><span class="check">2</span><div><strong>GroupM</strong><small>Head Data & Technology, Nexus · Jan 2023–Feb 2024; earlier IT and project leadership roles</small></div></li>
+              <li><span class="check">3</span><div><strong>Education & certification</strong><small>MCA · Certified ScrumMaster (CSM)</small></div></li>
+              <li><span class="check">4</span><div><strong>Availability</strong><small>Immediately available · Mumbai / Thane or remote opportunities preferred</small></div></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-
-      <div class="projects">
-        <article class="project-card">
-          <h3>Traditional Media Campaign Performance Dashboard</h3>
-          <p>
-            A short explanation of the problem your project solves, the main
-            features, and the technologies used.
-          </p>
-
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/watch?v=8BK2h5sYexo"
-              title="Project One live demo"
-              loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="links">
-            <a href="https://github.com/YOUR-USERNAME/project-one" target="_blank" rel="noopener">Code</a>
-            <a href="https://www.youtube.com/watch?v=8BK2h5sYexo" target="_blank" rel="noopener">Live Demo</a>
-          </div>
-        </article>
-		 <article class="project-card">
-          <h3>Traditional Media Buying Dashboard</h3>
-          <p>
-            A short explanation of the problem your project solves, the main
-            features, and the technologies used.
-          </p>
-
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/watch?v=Uwk0u3eKb2E"
-              title="Project One live demo"
-              loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="links">
-            <a href="https://github.com/YOUR-USERNAME/project-one" target="_blank" rel="noopener">Code</a>
-            <a href="https://www.youtube.com/watch?v=Uwk0u3eKb2E" target="_blank" rel="noopener">Live Demo</a>
-          </div>
-        </article>
-
-	 <article class="project-card">
-          <h3>Consumer Behaviour Dashboard</h3>
-          <p>
-            A short explanation of the problem your project solves, the main
-            features, and the technologies used.
-          </p>
-
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/watch?v=uRhgRJdAd4c"
-              title="Project One live demo"
-              loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="links">
-            <a href="https://github.com/YOUR-USERNAME/project-one" target="_blank" rel="noopener">Code</a>
-            <a href="https://www.youtube.com/watch?v=uRhgRJdAd4c" target="_blank" rel="noopener">Live Demo</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3>Digital Media Campaign Performance Dashboard</h3>
-          <p>
-            Describe the features, your role, and the technologies you used.
-          </p>
-
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/watch?v=JODF8BaVANA"
-              title="Project Two live demo"
-              loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="tags">
-            <span>Python</span>
-            <span>Git</span>
-          </div>
-
-          <div class="links">
-            <a href="https://github.com/YOUR-USERNAME/project-two" target="_blank" rel="noopener">Code</a>
-            <a href="https://www.youtube.com/watch?v=JODF8BaVANA" target="_blank" rel="noopener">Live Demo</a>
-          </div>
-        </article>
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-label">Capabilities</div><h2>Core expertise</h2></div><p class="section-intro">A cross-functional blend of platform knowledge, analytics, domain understanding and programme delivery.</p></div>
+        <div class="skills-grid">
+          <article class="skill"><h3>Cloud data platforms</h3><p>Azure Data Factory, ADLS Gen2, Azure SQL, Databricks / PySpark, Synapse and Fabric; working familiarity with GCP services and BigQuery.</p></article>
+          <article class="skill"><h3>BI & decision support</h3><p>Power BI, Looker Studio, KPI frameworks, semantic models, executive dashboards and reporting automation.</p></article>
+          <article class="skill"><h3>MarTech & integrations</h3><p>Google Ads, Meta, DV360 and GA4 data; APIs, CAPI, CRM integrations, lead automation and campaign measurement.</p></article>
+          <article class="skill"><h3>Data governance & quality</h3><p>Naming standardisation, data quality checks, lineage and metadata considerations, validation and consistent KPI definitions.</p></article>
+          <article class="skill"><h3>Programme & delivery</h3><p>Agile / Scrum, project planning, RAID and dependency management, stakeholder communication, UAT, go-live and continuous improvement.</p></article>
+          <article class="skill"><h3>Business & domain</h3><p>Media planning and buying, campaign performance, consumer behaviour, BFSI / insurance reporting and senior leadership dashboards.</p></article>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Want to collaborate, ask a question, or share an opportunity?</p>
-      <div class="contact-links">
-        <a class="btn primary" href="mailto:your-email@example.com">Email Me</a>
-        <a class="btn ghost" href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-label">Selected work</div><h2>Projects & video walkthroughs</h2></div>
+          <p class="section-intro">The project summaries below describe the business purpose and solution approach. Video players use the YouTube links supplied in the original portfolio; if a video is private or unavailable, open it directly on YouTube.</p>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-top">
+              <div><div class="project-num">PROJECT 01</div><h3>Traditional Media Campaign Performance Dashboard</h3><p class="project-summary">A performance view for tracking traditional media delivery and comparing campaign outcomes against planned KPIs—helping teams move from fragmented updates toward a more consistent performance conversation.</p></div>
+              <span class="project-type">Media Analytics</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Business challenge</h4><p>Campaign stakeholders need a consolidated view of delivery, KPI achievement and potential overspend to make timely decisions and communicate performance clearly.</p>
+                <h4>Solution approach</h4><ul><li>Bring key campaign and delivery measures into a shared reporting view.</li><li>Present performance against targets in a decision-friendly dashboard.</li><li>Support stakeholder reviews with consistent metrics and clearer exception visibility.</li></ul>
+                <h4>Role & value</h4><p>Portfolio positioning: business requirements, KPI alignment, stakeholder coordination and delivery oversight. Specific source-system details and quantified outcomes should be confirmed against the project before external publication.</p>
+                <div class="tags"><span class="tag">Media KPIs</span><span class="tag">Power BI / BI</span><span class="tag">Stakeholder Reporting</span><span class="tag">Delivery Governance</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>Video walkthrough</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Uwk0u3eKb2E" title="Traditional Media Campaign Performance Dashboard video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Video ID: Uwk0u3eKb2E · Embedded from YouTube</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=Uwk0u3eKb2E" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div><div class="project-num">PROJECT 02</div><h3>Traditional Media Buying Dashboard</h3><p class="project-summary">A consolidated view to help media teams review buying and delivery indicators, including planned versus delivered activity and relevant campaign measures.</p></div>
+              <span class="project-type">Media Buying</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Business challenge</h4><p>Buying teams need a clearer way to monitor campaign activity and spot differences between planned delivery and actual performance without repeatedly compiling reports manually.</p>
+                <h4>Solution focus</h4><ul><li>Organise buying and delivery metrics into a single dashboard experience.</li><li>Make campaign status and performance easier to scan during reviews.</li><li>Support consistent reporting for media and business stakeholders.</li></ul>
+                <h4>Business relevance</h4><p>Designed around reporting usability, campaign visibility and better-informed buying conversations. Confirm the exact measures and source systems with the original project owner before publishing a detailed technical claim.</p>
+                <div class="tags"><span class="tag">Media Buying</span><span class="tag">KPI Tracking</span><span class="tag">Dashboard Design</span><span class="tag">Business Reporting</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>Video walkthrough</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Uwk0u3eKb2E" title="Traditional Media Buying Dashboard video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Video ID: Uwk0u3eKb2E · Same source video supplied for Project 01</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=Uwk0u3eKb2E" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div><div class="project-num">PROJECT 03</div><h3>Consumer Behaviour Dashboard</h3><p class="project-summary">An analytics view focused on consumer behaviour signals, giving stakeholders a structured way to explore patterns and support audience- and marketing-related decisions.</p></div>
+              <span class="project-type">Consumer Insights</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Business challenge</h4><p>Consumer and marketing data can be difficult to interpret when indicators are spread across reports. A dashboard can bring key observations together and make trends easier to discuss.</p>
+                <h4>Solution focus</h4><ul><li>Present selected consumer indicators in a clear visual format.</li><li>Make comparisons and patterns easier for business users to interpret.</li><li>Support insight-led discussions with a shared view of the data.</li></ul>
+                <h4>Business relevance</h4><p>Useful for consumer insight discussions and marketing planning. The exact dataset, dimensions and validated business outcomes were not specified in the supplied HTML.</p>
+                <div class="tags"><span class="tag">Consumer Insights</span><span class="tag">Data Visualisation</span><span class="tag">Marketing Analytics</span><span class="tag">Decision Support</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>Video walkthrough</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/uRhgRJdAd4c" title="Consumer Behaviour Dashboard video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Video ID: uRhgRJdAd4c · Embedded from YouTube</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=uRhgRJdAd4c" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div><div class="project-num">PROJECT 04</div><h3>Digital Media Campaign Performance Dashboard</h3><p class="project-summary">A digital campaign reporting concept to help stakeholders monitor performance across channels and use campaign data more efficiently in optimisation discussions.</p></div>
+              <span class="project-type">Digital Analytics</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Business challenge</h4><p>Digital performance data is distributed across advertising and analytics platforms. Teams need a consistent reporting layer to review results and make decisions faster.</p>
+                <h4>Relevant solution experience</h4><ul><li>Integrate marketing data from platforms such as Google Ads, Meta, DV360 and GA4 through APIs or data pipelines where applicable.</li><li>Structure curated data for KPI reporting and visualisation.</li><li>Use dashboards to review campaign performance and highlight exceptions.</li></ul>
+                <h4>Related portfolio experience</h4><p>Madison initiatives included marketing data integration, cloud data platforms, API-driven workflows and BI dashboards. The exact architecture shown in this video should be verified before attributing each component to this specific project.</p>
+                <div class="tags"><span class="tag">Marketing APIs</span><span class="tag">Cloud Data</span><span class="tag">Power BI</span><span class="tag">Campaign Optimisation</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>Video walkthrough</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/JODF8BaVANA" title="Digital Media Campaign Performance Dashboard video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Video ID: JODF8BaVANA · Embedded from YouTube</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=JODF8BaVANA" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div><div class="project-num">PROJECT 05</div><h3>Marketing Data Integration & Automation</h3><p class="project-summary">A broader portfolio capability: bringing marketing-platform data together, reducing repeated manual reporting tasks and supporting more timely performance insights.</p></div>
+              <span class="project-type">MarTech & Automation</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Scope</h4><ul><li>Marketing data sources included Google, Meta, DV360, GA4 and CRM-related data in relevant initiatives.</li><li>Cloud data and reporting components included BigQuery / Azure SQL, Azure Data Factory, Databricks and Power BI in different workflows.</li><li>API-to-CRM workflows, lead automation and Conversion API initiatives formed part of the wider MarTech portfolio.</li></ul>
+                <h4>Impact areas</h4><p>More timely reporting, reduced manual effort, improved data consistency and better visibility for business stakeholders. Reported outcomes across selected initiatives included approximately 40% less manual effort and capacity savings of 2–3 FTE; do not attribute these metrics to every component individually.</p>
+                <div class="tags"><span class="tag">APIs</span><span class="tag">Azure / GCP</span><span class="tag">ADF</span><span class="tag">Databricks</span><span class="tag">Power BI</span><span class="tag">Data Quality</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>Portfolio video reference</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/JODF8BaVANA" title="Digital campaign analytics video reference for marketing data integration portfolio" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Related video supplied in the original page; this is a portfolio reference, not a separately verified demo of every integration.</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=JODF8BaVANA" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-label">How I work</div><h2>From business need to measurable delivery</h2></div></div>
+        <div class="process">
+          <article class="process-card"><h3>Discover & align</h3><p>Clarify the business problem, audience, KPIs, requirements, constraints and definition of success.</p></article>
+          <article class="process-card"><h3>Design & plan</h3><p>Align the solution approach, delivery milestones, dependencies, ownership, risks and governance.</p></article>
+          <article class="process-card"><h3>Deliver & validate</h3><p>Coordinate teams, track RAID, validate data and dashboards, support UAT and prepare go-live.</p></article>
+          <article class="process-card"><h3>Measure & improve</h3><p>Review adoption and business value, resolve gaps and identify opportunities for automation and optimisation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div><div class="section-label">Let's connect</div><h2>Have a data or transformation challenge?</h2><p>I’m open to senior opportunities across Data & Analytics, MarTech, Cloud Transformation, Technical Programme Management and Technology Delivery Leadership. Mumbai / Thane and remote roles are preferred; immediately available.</p></div>
+          <div class="actions" style="margin-top:0">
+            <a class="btn primary" href="mailto:pallaviskale@gmail.com">Email Pallavi ↗</a>
+            <a class="btn" href="https://www.linkedin.com/in/pallavi-modak" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Pallavi Modak. Built with HTML, CSS, and JavaScript.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer><div class="wrap foot-inner"><span>© <span id="year"></span> Pallavi Modak · Data, MarTech & Cloud Transformation</span><span>Built as a responsive, single-file HTML portfolio.</span></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
