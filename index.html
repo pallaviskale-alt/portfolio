@@ -99,6 +99,19 @@
     .profile-photo-caption strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:3px}
     @media(max-width:620px){.profile-photo-wrap{gap:14px}.profile-photo{width:94px;height:94px;flex-basis:94px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+    .blueprint-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 8px}
+    .blueprint-step{position:relative;padding:14px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.035);min-height:112px}
+    .blueprint-step strong{display:block;color:var(--ink);font-size:.88rem;margin-bottom:7px}
+    .blueprint-step span{display:block;color:var(--muted);font-size:.77rem;line-height:1.45}
+    .blueprint-step em{display:inline-block;font-style:normal;font-size:.68rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+    .groupm-timeline{display:grid;gap:10px;margin-top:18px}
+    .groupm-role{display:grid;grid-template-columns:155px 1fr;gap:14px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025)}
+    .groupm-role time{color:var(--accent);font-size:.82rem;font-weight:700}
+    .groupm-role strong{display:block;color:var(--ink);font-size:.9rem;margin-bottom:3px}
+    .groupm-role small{display:block;color:var(--muted);font-size:.8rem;line-height:1.45}
+    @media(max-width:700px){.blueprint-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.groupm-role{grid-template-columns:1fr;gap:5px}}
+
   </style>
 </head>
 <body>
@@ -159,14 +172,22 @@
         <div class="about-grid">
           <div class="surface">
             <p>I am a data and technology leader with experience spanning media, BFSI and insurance environments. My work brings together cloud data engineering, BI, marketing technology and delivery management to make reporting more timely, consistent and actionable.</p>
-            <p>At Madison World, my remit included data and automation initiatives such as marketing data integration, campaign dashboards, API-to-CRM workflows, data quality standardisation and executive reporting. Previously at GroupM, I worked across data and technology initiatives supporting media planning, optimisation, data exchange and business reporting.</p>
-            <p>My strength is connecting engineering teams and business stakeholders: clarifying the outcome, shaping the delivery plan, managing dependencies and risks, and helping teams take solutions through testing and release.</p>
+            <p>At Madison World, my remit included data and automation initiatives such as marketing data integration, campaign dashboards, API-to-CRM workflows, data quality standardisation and executive reporting. Before that, I spent over 11 years with GroupM, from July 2012 to February 2024, working across the IT team, Mindshare Fulcrum and GroupM Nexus in progressively senior technology, programme and data leadership roles.</p>
+            <p>Across GroupM, I partnered with business, media, engineering and architecture teams on enterprise technology delivery, digital transformation, cloud data platforms, marketing data lake initiatives, automation and analytics. My strength is connecting engineering teams and business stakeholders: clarifying outcomes, shaping delivery plans, managing dependencies and risks, and taking solutions through testing and release.</p>
+            <div class="card-kicker" style="margin-top:20px">GroupM experience · July 2012 – February 2024</div>
+            <div class="groupm-timeline" aria-label="GroupM career timeline">
+              <div class="groupm-role"><time>Jan 2023 – Feb 2024</time><div><strong>Head – Data & Technology | GroupM Nexus</strong><small>Led enterprise cloud data architecture and marketing technology programmes; coordinated engineering, architecture, QA and business teams across global advertiser workstreams.</small></div></div>
+              <div class="groupm-role"><time>Mar 2021 – Dec 2022</time><div><strong>Partner – Data & Technology | Mindshare Fulcrum</strong><small>Led data automation and cloud migration initiatives, including HUL media tracking automation and Marketing Data Lake design centralising Google, Meta and DV360 data.</small></div></div>
+              <div class="groupm-role"><time>Oct 2017 – Feb 2021</time><div><strong>Change Project Director | GroupM Media India</strong><small>Owned enterprise digital transformation, cloud visualisation, reporting and process automation programmes with cross-functional stakeholder and delivery governance.</small></div></div>
+              <div class="groupm-role"><time>Sep 2014 – Sep 2017</time><div><strong>Project Manager | GroupM Media India</strong><small>Managed business technology projects, requirements, process design, quality assurance and cross-functional delivery.</small></div></div>
+              <div class="groupm-role"><time>Jul 2012 – Aug 2014</time><div><strong>Project Leader | GroupM India</strong><small>Supported IT and business technology delivery, project coordination and stakeholder collaboration.</small></div></div>
+            </div>
           </div>
           <div class="surface">
             <div class="card-kicker">Career snapshot</div>
             <ul class="focus-list">
               <li><span class="check">1</span><div><strong>Madison World</strong><small>Head – Data & Automation · Feb 2024–May 2026</small></div></li>
-              <li><span class="check">2</span><div><strong>GroupM</strong><small>Head Data & Technology, Nexus · Jan 2023–Feb 2024; earlier IT and project leadership roles</small></div></li>
+              <li><span class="check">2</span><div><strong>GroupM · 11+ years</strong><small>July 2012–February 2024 · IT team, Mindshare Fulcrum and GroupM Nexus; technology, transformation, data and programme leadership</small></div></li>
               <li><span class="check">3</span><div><strong>Education & certification</strong><small>MCA · Certified ScrumMaster (CSM)</small></div></li>
               <li><span class="check">4</span><div><strong>Availability</strong><small>Immediately available · Mumbai / Thane or remote opportunities preferred</small></div></li>
             </ul>
@@ -210,9 +231,9 @@
               </div>
               <div class="detail-block">
                 <h4>Video walkthrough</h4>
-                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/w_cjIu72dyk" title="Traditional Media Campaign Performance Dashboard video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                <div class="video-note">Video ID: Uwk0u3eKb2E · Embedded from YouTube</div>
-                <a class="video-link" href="https://www.youtube.com/watch?v=w_cjIu72dyk" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/8XX18ybXgx4" title="Traditional Media Campaign Performance Dashboard video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Video ID: 8XX18ybXgx4 · Embedded from YouTube</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=8XX18ybXgx4" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
               </div>
             </div>
           </article>
@@ -301,6 +322,42 @@
               </div>
             </div>
           </article>
+          <article class="project">
+            <div class="project-top">
+              <div><div class="project-num">PROJECT 06</div><h3>Marketing Data Lake Blueprint & Automation</h3><p class="project-summary">A centralised marketing data lake blueprint designed to bring fragmented media-platform data into a governed, reusable data foundation—supporting automated ingestion, standardisation, analytics and campaign reporting.</p></div>
+              <span class="project-type">Cloud Data Architecture & MarTech</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Business challenge</h4>
+                <p>Marketing and media data is distributed across platforms and legacy environments, creating inconsistent naming, manual consolidation and delays in reporting. Teams need a scalable foundation that can bring data together while improving quality, reuse and access for analytics.</p>
+                <h4>Blueprint & automation flow</h4>
+                <div class="blueprint-flow" role="img" aria-label="Marketing Data Lake flow from source platforms through ingestion, data lake storage, curated data and analytics">
+                  <div class="blueprint-step"><em>01 · Sources</em><strong>Marketing platforms</strong><span>Google, Meta, DV360 and related campaign / media data</span></div>
+                  <div class="blueprint-step"><em>02 · Ingestion</em><strong>Automated data intake</strong><span>API-led extraction, scheduled pipelines and repeatable loads</span></div>
+                  <div class="blueprint-step"><em>03 · Data foundation</em><strong>Lake & standardisation</strong><span>Central landing, schema alignment, naming conventions and quality checks</span></div>
+                  <div class="blueprint-step"><em>04 · Consumption</em><strong>Curated analytics</strong><span>Reusable datasets for dashboards, attribution and business reporting</span></div>
+                </div>
+                <h4>Solution scope</h4>
+                <ul>
+                  <li>Partnered with system architects to shape a Marketing Data Lake that centralised Google, Meta and DV360 data for downstream analytics and reporting.</li>
+                  <li>Supported phased modernisation from legacy SQL environments to Microsoft Azure, coordinating engineering, security and QA workstreams through readiness and go-live.</li>
+                  <li>Defined the data flow around repeatable ingestion, common structures, nomenclature standardisation, validation and curated consumption.</li>
+                  <li>Aligned delivery across business users, media stakeholders, architects and engineering teams, with governance for dependencies, risks, testing and release.</li>
+                </ul>
+                <h4>Role & business value</h4>
+                <p>Contributed to the solution blueprint and programme delivery within Mindshare Fulcrum / GroupM. Related media tracking automation reduced manual effort by approximately 40% and shortened data latency from five days to near real time; these outcomes relate to the wider programme and are not attributed solely to the blueprint diagram.</p>
+                <div class="tags"><span class="tag">Marketing Data Lake</span><span class="tag">Microsoft Azure</span><span class="tag">API Integration</span><span class="tag">Google · Meta · DV360</span><span class="tag">Data Quality</span><span class="tag">Automation</span><span class="tag">Analytics</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>Video walkthrough</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/tHYktB60P5Q" title="Marketing Data Lakes Blueprint video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">Video ID: tHYktB60P5Q · Marketing Data Lakes Blueprint</div>
+                <a class="video-link" href="https://www.youtube.com/watch?v=tHYktB60P5Q" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
