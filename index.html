@@ -81,6 +81,21 @@
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
     .tag{font-size:.76rem;background:rgba(130,170,255,.09);border:1px solid rgba(130,170,255,.2);color:#c8d8ff;border-radius:7px;padding:5px 8px}
     .video-link{display:inline-flex;gap:7px;margin-top:12px;color:var(--accent);font-weight:700;font-size:.88rem}
+    .nwc-benefit{margin-top:18px;padding:20px;background:linear-gradient(135deg,rgba(86,224,192,.10),rgba(130,170,255,.08));border:1px solid rgba(86,224,192,.28);border-radius:18px}
+    .nwc-benefit-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+    .nwc-benefit-head strong{display:block;color:var(--accent);font-size:clamp(1.8rem,4vw,2.55rem);line-height:1.1;letter-spacing:-.05em}
+    .nwc-benefit-head span{display:block;color:var(--muted);font-size:.82rem;margin-top:5px}
+    .nwc-benefit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .nwc-benefit-item{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(5,12,22,.28)}
+    .nwc-benefit-item strong{display:block;color:var(--ink);font-size:1.08rem}
+    .nwc-benefit-item span{display:block;color:var(--muted);font-size:.8rem;margin-top:4px}
+    .nwc-table-wrap{overflow-x:auto;margin-top:14px}
+    .nwc-table{width:100%;border-collapse:collapse;font-size:.84rem;min-width:420px}
+    .nwc-table th,.nwc-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+    .nwc-table th{color:var(--accent);font-weight:750}
+    .nwc-table td{color:#c5d1e1}
+    .nwc-table tr:last-child td{font-weight:800;color:var(--ink);border-bottom:0}
+    .nwc-assumption{font-size:.76rem!important;color:#8798af!important;margin:12px 0 0!important}
     .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
     .process-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
     .process-card:before{counter-increment:step;content:"0" counter(step);color:var(--accent);font-weight:850;font-size:.82rem;letter-spacing:.1em}
@@ -111,6 +126,7 @@
     .groupm-role strong{display:block;color:var(--ink);font-size:.9rem;margin-bottom:3px}
     .groupm-role small{display:block;color:var(--muted);font-size:.8rem;line-height:1.45}
     @media(max-width:700px){.blueprint-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.groupm-role{grid-template-columns:1fr;gap:5px}}
+    @media(max-width:620px){.nwc-benefit-grid{grid-template-columns:1fr}.nwc-benefit{padding:16px}}
 
   </style>
 </head>
@@ -354,6 +370,59 @@
                 <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/tHYktB60P5Q" title="Marketing Data Lakes Blueprint video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                 <div class="video-note">Video ID: tHYktB60P5Q · Marketing Data Lakes Blueprint</div>
                 <a class="video-link" href="https://www.youtube.com/watch?v=tHYktB60P5Q" target="_blank" rel="noopener noreferrer">Open video on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <div>
+                <div class="project-num">PROJECT 07</div>
+                <h3>Net Working Capital (NWC) Optimisation</h3>
+                <p class="project-summary">A working-capital optimisation solution focused on improving cash utilisation by aligning the timing of client collections and creditor payments—helping increase favourable cash float and reduce funding exposure.</p>
+              </div>
+              <span class="project-type">Finance Transformation & Automation</span>
+            </div>
+            <div class="project-body">
+              <div class="detail-block">
+                <h4>Business challenge</h4>
+                <p>Timing differences between client collections and creditor payments can create avoidable funding exposure and missed opportunities to earn interest on available cash. The NWC tool supports better visibility and timing decisions across these working-capital flows.</p>
+                <h4>Solution value</h4>
+                <ul>
+                  <li>Optimises the timing of client collections to improve favourable cash float.</li>
+                  <li>Supports more effective creditor-payment timing and reduces the number of days funding is required.</li>
+                  <li>Helps improve working-capital utilisation through incremental interest earnings and reduced financing costs.</li>
+                  <li>Provides a scalable financial-benefit opportunity as transaction volumes and working-capital efficiency improve.</li>
+                </ul>
+                <h4>Potential annual financial benefit</h4>
+                <div class="nwc-benefit">
+                  <div class="nwc-benefit-head">
+                    <div><strong>₹65.2 lakh</strong><span>Illustrative annual benefit per ₹1,000 crore of annual transaction value</span></div>
+                    <div><strong>7%</strong><span>Illustrative annual cost / yield assumption</span></div>
+                  </div>
+                  <div class="nwc-benefit-grid">
+                    <div class="nwc-benefit-item"><strong>₹34.5 lakh</strong><span>Additional float earnings · ₹600 Cr collections with 3 additional float days</span></div>
+                    <div class="nwc-benefit-item"><strong>₹30.7 lakh</strong><span>Reduced funding costs · ₹400 Cr payments with 4 fewer funding days</span></div>
+                  </div>
+                  <div class="nwc-table-wrap">
+                    <table class="nwc-table" aria-label="Illustrative NWC financial benefit calculation">
+                      <thead><tr><th>Financial benefit</th><th>Illustrative assumptions</th><th>Annual value</th></tr></thead>
+                      <tbody>
+                        <tr><td>Additional float earnings</td><td>₹600 Cr collections; 3 additional float days</td><td>₹34.5 lakh</td></tr>
+                        <tr><td>Reduced funding costs</td><td>₹400 Cr payments; 4 fewer funding days</td><td>₹30.7 lakh</td></tr>
+                        <tr><td>Total potential benefit</td><td>₹1,000 Cr annual transactions</td><td>₹65.2 lakh</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="nwc-assumption">Illustrative calculation based on separate collection and payment pools, a 365-day year and a 7% annual rate. Assumes a 3-day improvement in favourable cash float and a 4-day reduction in funding exposure. Actual benefits will vary with transaction volumes, cash-flow patterns and realised efficiency improvements.</p>
+                </div>
+                <div class="tags"><span class="tag">Working Capital Optimisation</span><span class="tag">Cash Flow Management</span><span class="tag">Collections & Payments</span><span class="tag">Financial Benefits</span><span class="tag">Process Automation</span></div>
+              </div>
+              <div class="detail-block">
+                <h4>NWC solution video walkthrough</h4>
+                <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/QHdklSh6rdA" title="Net Working Capital Optimisation video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="video-note">NWC solution walkthrough · Embedded from YouTube</div>
+                <a class="video-link" href="https://youtu.be/QHdklSh6rdA" target="_blank" rel="noopener noreferrer">Watch NWC video on YouTube ↗</a>
               </div>
             </div>
           </article>
